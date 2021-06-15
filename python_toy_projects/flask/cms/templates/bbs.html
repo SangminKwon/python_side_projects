@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {# 주석 #}
+  {% include 'public/head.html' %}
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    {# 해당 파일이 없을 때 1순위, 2순위 등등 후보를 배치, 오류시 무시하는 것#}
+    {% include ['a.html, b.html'] ignore missing %}
+
+    {# 화면 배치 #}
+    {# 1. 페이지 로딩 #}
+    {% include 'public/preloader.html' %}
+
+    {# 2. 네비바 #}
+    {% include 'public/navbar.html' %}
+    
+    {# 3. 사이드바 : 왼쪽 메뉴 담당 #}
+    {% include 'public/sidebar.html' %}
+
+    {# 4. 본문 : 메인 서비스 #}
+    {% include 'pages/bbs_sub.html' %}
+
+    {# 5. 하단 : Copyright ~ #}
+    {% include 'public/footer.html' %}
+
+    {# 6. 오른쪽 설정 메뉴 : 생략가능 #}
+    {% include 'public/aside.html' %}
+
+  </div>
+  {% include 'public/js.html' %}
+
+</body>
+
+</html>

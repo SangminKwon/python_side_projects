@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <!-- jquery 설치 끝. JS를 손쉽게 쓸 수 있는 라이브러리-->
+        <!-- jquery에서는 요소를 특정할 때 다음과 같이 사용
+            $('css selector')
+        -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <!-- div : 영역용 태그로 웹 페이지 레이아웃을 구성할 때 사용 화면에 보이지 않는다-->
+        <div>hello python</div>
+        <div>여기는 파란색</div>
+        <!-- css selector 1번째 표현
+            - 요소명을 그대로 사용 => div
+        -->
+        <!--특정 요소 찾기-->
+        <script>
+            // 스크립트는 스크립트 태그 내에서만 작성
+            // $('div') -> 찾음 (div는 css 셀렉)
+            // .css('color', 'red') -> 빨간색으로 변경
+            // css selector의 표현으로 ex) div 와 같은 방식으로 표현하면 
+            // 이 문서상에 존재하는 모든 요소들 중에, 이름이 div인 요소를
+            // 모두 찾는다. => 파이썬으로 처리하면 list가 나온다.(복수)
+            $('div').css('color','red')
+        </script>
+    </body>
+</html>

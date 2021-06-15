@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <!-- 헤더, 메타 정보 담당-->
+    </head>
+    <body>
+        <!-- 바디, 화면에 보이는 부분 담당-->
+        <h2>로그인 페이지</h2>
+        <fieldset>
+            <!-- form 태그는 클라이언트에서 서버로 데이터를 전송할 때 
+                 method를 통해 전달해주는 역할 담당
+                - 브라우저의 껌뻑임 == 화면 렌더링.
+                - 속성
+                    - action : 데이터를 전달할 서버의 주소(URL) / 생략시 현재 페이지의 주소가 입력된다.
+                
+                -->
+            <form  action = '/login' method = 'POST'>
+                <!-- 사용자로부터 입력받는 태그
+                    name 값은 데이터가 서버로 갈 때 키에 해당된다.
+                -->
+                <input type = 'text' name = 'uid' placeholder="아이디" required/>
+                <br/><br/>
+                <input type = 'password' name = 'upw' placeholder="비밀번호" required/>
+                <br/><br/>
+                <input type = 'submit' value = '로그인'/>
+            </form>
+        </fieldset>
+    </body>
+</html>

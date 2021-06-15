@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div>hello python</div>
+        <div id ='blueDiv'>여기는 파란색</div>
+        <div class = 'pinkC'>나는 핑크색</div>
+        <div class = 'pinkC'>나는 핑크색2</div>
+        <p class = 'pinkC'>나는 핑크색2</p>
+        <p class = 'test'>문단</p>
+        
+        <!-- 리스트 -->
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3
+                <ol>
+                    <li>a</li>
+                    <li>b</li>
+                </ol>
+            </li>
+        </ul>
+
+        <script>
+            // * : 모든 요소
+            $('*').css('color', 'black')
+            $('div').css('color','red')
+            
+            // css selector 2번째 표현
+            // 문서상에 고유한(유일한) 마크 지정가능 : 속성 id
+            // 표현 => #아이디 값
+            $('#blueDiv').css('color', 'blue')
+            
+            // css selector 3번째 표현
+            // 여러 개를 동시에 특정할 수 있다
+            // 표현 => .클래스 값
+            $('.pinkC').css('color', 'pink')
+            
+            // css selector 4번째 표현
+            // 조합 => 섞어서 표현
+            // 문서상에 존재하는 모든 요소들 중에 p 태그를 찾아서 
+            // 그중에 class 값이 pinkC인 요소를 찾는다. 색깔 그레이
+            $('p.pinkC').css('color', 'gray')
+
+            // css selector 5번째 표현
+            // 열거 => A, B, C, ... <=, 로 구분하여 표현
+            $('div.pinkC, p').css('color','green')
+
+            // css selector 6번째 표현
+            // 직계서열 => 부모>직계자식
+            // 후손     => 부모 후손(직계자식 포함)
+            $('ul>li').css('color', 'red')
+            $('ul li').css('color', 'purple')
+           
+        </script>
+    </body>
+</html>

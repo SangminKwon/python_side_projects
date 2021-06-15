@@ -1,0 +1,2 @@
+# CSS Selector 이해
+    - css Selector는 html의 특정 요소를 선택하도록 도와준다.

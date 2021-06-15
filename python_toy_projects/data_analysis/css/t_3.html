@@ -1,0 +1,48 @@
+<html>
+    <head>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="sale">343.47</td>
+                <td>377.81</td>
+                <td>316.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.308</td>
+            </tr>
+        </table>
+        <input type='text' id = 'uid' name = 'uid'/>
+
+        <script>
+            // 속성 셀렉터
+            // [속성명 = 속성값]
+            // val(값) => input 태그에 자동으로 입력된다.)
+            $('[name = uid]').val('아이디')
+
+
+            // 데이터가 동일한 이름을 가진 태그로 반복적으로 쌓여 있다
+            // id, class 등등 속성도 없다. 여기서 특정한다면
+            // 의사 결정 selector
+            // 반복되는 요소:함수()
+            $('td:first').css('color', 'red')
+            $('td:last').css('color', 'red')
+            // 순번 : 1,2,...
+            $('td:nth-child(3)').css('color', 'red')
+            // 순번 : 0,1,...
+            $('td:eq(3)').css('color', 'blue')
+            // 상위 그룹 지정
+            $('td:lt(2)').css('color', 'green')
+            // 하위 그룹 지정
+            $('td:gt(2)').css('color', 'pink')
+            // 짝수만
+            $('td:even').css('background-color', 'gray')
+            // 홀수만
+            $('td:odd').css('background-color','lightgray')
+
+
+        </script>
+    </body>
+</html>
